@@ -38,3 +38,30 @@ User Stories on function `truncatablePrimes(n)` taken from [FreeCodeCamp - Codin
 **Information Architecture**
 
 The function `truncatablePrimes(n)` returns a number, where `n` is a number between 8 and 11.
+
+## Features
+
+Allows the user to enter the number of truncatable primes as well as getting the sum of the first number of truncatable primes.  Performs checks on valid user input.  If the input is not valid, an error message is displayed.
+
+## Technologies
+
+Uses HTML5, CSS3, JavaScript, Bootstrap 5.2.0 and Google Fonts.
+
+## Testing
+
+Ensure all user stories have been met.
+
+## Deployment
+
+Deployed on [GitHub Pages](https://derektypist.github.io/project-euler-037) at the main branch.
+
+## Credits
+
+### Content
+
+Written by me.
+
+### Acknowledgements
+
+- [Project Euler](https://projecteuler.net)
+- [FreeCodeCamp](https://www.freecodecamp.org)
