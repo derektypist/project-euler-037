@@ -22,5 +22,28 @@
         <p>The aim is to find the sum of the n (between 8 and 11) primes that are both truncatable from left to right and right to left.  Begin by entering the number.</p>
         <p><strong>NOTE:</strong> 2, 3, 5, and 7 are not considered to be truncatable primes.</p>
     </section>
+
+    <!-- Set Up Form -->
+    <section class="container-fluid">
+        <form>
+            <!-- Set Up Label and Input -->
+            <article class="mb-3">
+                <label for="mynumber" class="form-label">Number of Primes (Required)</label>
+                <input class="form-control" title="Enter whole number between 8 and 11 (e.g. 8)" placeholder="Enter whole number between 8 and 11 (e.g. 8)" id="mynumber">
+            </article>
+
+            <!-- Set Up and Center Buttons -->
+            <article class="d-grid gap-2 d-flex justify-content-center">
+                <button type="button" class="btn btn-info" onclick="getNumberInfo()">Submit</button>
+                <button type="reset" class="btn btn-warning" onclick="clearInfo()">Reset</button>
+            </article>
+        </form>
+
+        <!-- Display Number Information -->
+        <p id="numinfo"></p>
+
+        <!-- Load Script -->
+        <script src="js/script.js"></script>
+    </section>
 </body>
 </html>
