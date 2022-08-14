@@ -31,3 +31,42 @@ function getNumberInfo() {
     // Display Information in the Browser
     document.getElementById("numinfo").innerHTML = txt;
 }
+
+// Function to check if n has an even digit (skip numbers with 4, 6, 8 or 0)
+function hasEvenDigit(n) {
+    return n.toString().split('').some(digit => digit%2===0 && digit !=='2');
+}
+
+// Function to check if the number n is a truncatable prime
+function isTruncatable(n) {
+    if (!isPrime(n)) return false;
+    for (let i=10;i<n;i*=10) {
+        if (!isPrime(n%i)) return false;
+        if (!isPrime(Math.floor(n/i))) return false;
+    }
+    return true;
+}
+
+/* 
+    Function to Return the Sum of Truncatable Primes
+    truncatablePrimes(8)  returns 1986
+    truncatablePrimes(9)  returns 5123
+    truncatablePrimes(10) returns 8920
+    truncatablePrimes(11) returns 748317
+*/
+function truncatablePrimes(n) {
+    let numTruncatablePrimes = 0;
+    let currentNum = 11;
+    let sum = 0;
+    while (numTruncatablePrimes < n) {
+        if (isTruncatable(currentNum)) {
+            sum += currentNum;
+            numTruncatablePrimes++;
+        }
+        currentNum += 2;
+        while (hasEvenDigit(currentNum)) {
+            currentNum += 2;
+        }
+    }
+    return sum;
+}
